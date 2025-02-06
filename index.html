@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SocialTrove - Facebook Ads</title>
- 
+    <link rel="stylesheet" href="styles.css">
+    
     <style>
         /* Estilos generales */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            color: #fff;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            text-align: center;
         }
 
         header {
-            background-color: #1e1e1e;
+            background: rgba(0, 123, 255, 0.9);
             padding: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        h1, h2 {
-            color: #ff9800;
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.05);
         }
 
         .highlight {
@@ -40,6 +54,45 @@
         @keyframes pulse {
             from { transform: scale(1); }
             to { transform: scale(1.1); }
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .benefit {
+            background: rgba(40, 167, 69, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.5);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255, 193, 7, 0.9);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.05);
         }
 
         .btn {
@@ -64,9 +117,10 @@
         }
 
         footer {
-            background-color: #1e1e1e;
-            padding: 10px;
+            background: rgba(52, 58, 64, 0.9);
+            padding: 15px 0;
             margin-top: 20px;
+            box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
         }
 
     </style>
