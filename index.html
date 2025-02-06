@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialTrove - Facebook Ads</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            background: rgba(0, 123, 255, 0.9);
+            padding: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ff5722;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .benefit {
+            background: rgba(40, 167, 69, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.5);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255, 193, 7, 0.9);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff9800;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        .countdown-container {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e91e63;
+        }
+
+        footer {
+            background: rgba(52, 58, 64, 0.9);
+            padding: 15px 0;
+            margin-top: 20px;
+            box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+    <script>
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            let timeLeft = 24 * 60 * 60;
+            function updateCountdown() {
+                let hours = Math.floor(timeLeft / 3600);
+                let minutes = Math.floor((timeLeft % 3600) / 60);
+                let seconds = timeLeft % 60;
+                countdownElement.innerHTML = `${hours}h : ${minutes}m : ${seconds}s`;
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateCountdown, 1000);
+                } else {
+                    timeLeft = 24 * 60 * 60;
+                    updateCountdown();
+                }
+            }
+            updateCountdown();
+        }
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>🚀 SocialTrove - Facebook Ads 🚀</h1>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h2>¿Por qué elegirnos?</h2>
+            <p>En <span class="highlight">SocialTrove</span>, creamos estrategias de alto impacto para maximizar tu inversión y generar <span class="highlight">resultados reales.</span></p>
+            <p>Trabajamos con análisis de datos, segmentación avanzada y creatividad para asegurarnos de que tu negocio crezca con publicidad efectiva.</p>
+        </section>
+        
+        <section>
+            <h2>📢 Servicios Incluidos 📢</h2>
+            <ul>
+                <li>✅ Optimización avanzada de campañas</li>
+                <li>✅ Creación de contenido atractivo</li>
+                <li>✅ Estrategias de retargeting efectivas</li>
+                <li>✅ Análisis de métricas y reportes detallados</li>
+                <li>✅ Soporte y asesoría continua</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔥 Oferta Especial 🔥</h2>
+            <p><span style="text-decoration: line-through; color: red;">$199 USD</span> <span class="highlight">AHORA SOLO POR $85 USD al mes</span></p>
+            <p class="cta">🚨 ¡Cupos limitados! No dejes pasar esta oportunidad. 🚀</p>
+            <div class="countdown-container">
+                <p>⏳ La oferta termina en:</p>
+                <div id="countdown"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📞 ¡Contáctanos Ahora! 📞</h2>
+            <p>Déjanos ayudarte a impulsar tu negocio al siguiente nivel.</p>
+            <p>📩 Email: socialtrove3@gmail.com</p>
+            <p>📞 Teléfono: +57 3117947704</p>
+            <a href="https://wa.me/573117947704?text=Hola%20SocialTrove,%20quiero%20saber%20m%C3%A1s%20sobre%20su%20estrategia%20de%20Facebook%20Ads!" target="_blank" class="btn">💬 WhatsApp</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - SocialTrove. Todos los derechos reservados.</p>
+        <p><a href="politicas.html">Políticas de Privacidad</a></p>
+    </footer>
+</body>
+</html>
