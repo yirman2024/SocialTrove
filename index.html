@@ -3,34 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page 3D</title>
+    <title>SocialTrove - Facebook Ads</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+        }
+
+        h1, h2 {
+            color: #ff9800;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ff5722;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff9800;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        .countdown-container {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e91e63;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+    <script>
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            let timeLeft = 24 * 60 * 60;
+            function updateCountdown() {
+                let hours = Math.floor(timeLeft / 3600);
+                let minutes = Math.floor((timeLeft % 3600) / 60);
+                let seconds = timeLeft % 60;
+                countdownElement.innerHTML = `${hours}h : ${minutes}m : ${seconds}s`;
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateCountdown, 1000);
+                } else {
+                    timeLeft = 24 * 60 * 60;
+                    updateCountdown();
+                }
+            }
+            updateCountdown();
+        }
+        window.onload = startCountdown;
+    </script>
 </head>
 <body>
+    <header>
+        <h1>🚀 SocialTrove - Facebook Ads 🚀</h1>
+    </header>
+    
     <div class="container">
-        <header class="header">
-            <h1 class="title">Bienvenido a Nuestro Sitio</h1>
-            <p class="subtitle">Descubre lo mejor de nosotros</p>
-            <a href="#more" class="cta-button">¡Saber Más!</a>
-        </header>
-        <section class="features" id="more">
-            <div class="feature-box">
-                <h2 class="feature-title">Característica 1</h2>
-                <p class="feature-description">Descripción breve de la característica 1.</p>
-            </div>
-            <div class="feature-box">
-                <h2 class="feature-title">Característica 2</h2>
-                <p class="feature-description">Descripción breve de la característica 2.</p>
-            </div>
-            <div class="feature-box">
-                <h2 class="feature-title">Característica 3</h2>
-                <p class="feature-description">Descripción breve de la característica 3.</p>
+        <section>
+            <h2>¿Por qué elegirnos?</h2>
+            <p>En <span class="highlight">SocialTrove</span>, creamos estrategias de alto impacto para maximizar tu inversión y generar <span class="highlight">resultados reales.</span></p>
+            <p>Trabajamos con análisis de datos, segmentación avanzada y creatividad para asegurarnos de que tu negocio crezca con publicidad efectiva.</p>
+        </section>
+        
+        <section>
+            <h2>📢 Servicios Incluidos 📢</h2>
+            <ul>
+                <li>✅ Optimización avanzada de campañas</li>
+                <li>✅ Creación de contenido atractivo</li>
+                <li>✅ Estrategias de retargeting efectivas</li>
+                <li>✅ Análisis de métricas y reportes detallados</li>
+                <li>✅ Soporte y asesoría continua</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔥 Oferta Especial 🔥</h2>
+            <p><span style="text-decoration: line-through; color: red;">$199 USD</span> <span class="highlight">AHORA SOLO POR $85 USD al mes</span></p>
+            <p class="cta">🚨 ¡Cupos limitados! No dejes pasar esta oportunidad. 🚀</p>
+            <div class="countdown-container">
+                <p>⏳ La oferta termina en:</p>
+                <div id="countdown"></div>
             </div>
         </section>
-        <footer class="footer">
-            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-        </footer>
+
+        <section>
+            <h2>📞 ¡Contáctanos Ahora! 📞</h2>
+            <p>Déjanos ayudarte a impulsar tu negocio al siguiente nivel.</p>
+            <p>📩 Email: socialtrove3@gmail.com</p>
+            <p>📞 Teléfono: +57 3117947704</p>
+            <a href="https://wa.me/573117947704?text=Hola%20SocialTrove,%20quiero%20saber%20m%C3%A1s%20sobre%20su%20estrategia%20de%20Facebook%20Ads!" target="_blank" class="btn">💬 WhatsApp</a>
+        </section>
     </div>
-    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2025 - SocialTrove. Todos los derechos reservados.</p>
+        <p><a href="politicas.html">Políticas de Privacidad</a></p>
+    </footer>
 </body>
 </html>
