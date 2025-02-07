@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SocialTrove - Agencia experta en Facebook Ads. Publicidad efectiva para hacer crecer tu negocio.">
     <title>SocialTrove - Facebook Ads</title>
     <link rel="stylesheet" href="styles.css">
     
@@ -30,6 +31,12 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
         section {
             padding: 40px;
             margin: 20px auto;
@@ -54,27 +61,6 @@
         @keyframes pulse {
             from { transform: scale(1); }
             to { transform: scale(1.1); }
-        }
-
-        .benefits-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .benefit {
-            background: rgba(40, 167, 69, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            font-weight: bold;
-            box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .benefit:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.5);
         }
 
         ul {
@@ -123,26 +109,38 @@
             box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
         }
 
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         function startCountdown() {
             const countdownElement = document.getElementById("countdown");
             let timeLeft = 24 * 60 * 60;
+
             function updateCountdown() {
                 let hours = Math.floor(timeLeft / 3600);
                 let minutes = Math.floor((timeLeft % 3600) / 60);
                 let seconds = timeLeft % 60;
+
                 countdownElement.innerHTML = `${hours}h : ${minutes}m : ${seconds}s`;
+
                 if (timeLeft > 0) {
                     timeLeft--;
-                    setTimeout(updateCountdown, 1000);
                 } else {
-                    timeLeft = 24 * 60 * 60;
-                    updateCountdown();
+                    clearInterval(countdownInterval);
                 }
             }
+
             updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
         }
+
         window.onload = startCountdown;
     </script>
 </head>
@@ -162,10 +160,9 @@
             <h2>📢 Servicios Incluidos 📢</h2>
             <ul>
                 <li>✅ Creación de contenido atractivo</li>
-                <li>✅ Análisis de métricas y reportes periódicos</li>
+                <li>✅ Análisis de métricas y reportes detallados</li>
                 <li>✅ Configuración y optimización de campañas</li>
                 <li>✅ Estrategias de retargeting efectivas</li>
-                <li>✅ Análisis de métricas y reportes detallados</li>
                 <li>✅ Soporte y asesoría continua</li>
             </ul>
         </section>
