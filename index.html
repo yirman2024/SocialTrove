@@ -198,6 +198,17 @@ Modal de información
     </div>
 </div>-->
 
+<!-- Ventana emergente de oferta -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="cerrarPopup()">&times;</span>
+        <h2>🎉 ¡Oferta Especial por Tiempo Limitado!</h2>
+        <p>Obtén todos los servicios del <strong>Plan Élite</strong> por solo <strong>$99 USD</strong> durante 2 meses.</p>
+        <p>Oferta válida solo por:</p>
+        <div id="countdown" class="countdown"></div>
+        <button class="btn-oferta" onclick="aprovecharOferta()">Aprovechar oferta</button>
+    </div>
+</div>
 
 <script>
     // Función para abrir el modal
