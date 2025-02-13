@@ -125,3 +125,46 @@ window.onclick = function(event) {
         cerrarModal();
     }
 }
+
+
+
+// Mostrar la ventana emergente cuando se carga la página
+window.onload = function() {
+    document.getElementById("popup").style.display = "flex";
+    iniciarCuentaRegresiva();
+};
+
+// Cerrar la ventana emergente
+function cerrarPopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+// Función para la cuenta regresiva de 5 horas
+function iniciarCuentaRegresiva() {
+    let tiempoRestante = 5 * 60 * 60; // 5 horas en segundos
+
+    let countdownElement = document.getElementById("countdown");
+    
+    function actualizarCuenta() {
+        let horas = Math.floor(tiempoRestante / 3600);
+        let minutos = Math.floor((tiempoRestante % 3600) / 60);
+        let segundos = tiempoRestante % 60;
+
+        countdownElement.innerHTML = `${horas}h ${minutos}m ${segundos}s`;
+
+        if (tiempoRestante > 0) {
+            tiempoRestante--;
+            setTimeout(actualizarCuenta, 1000);
+        } else {
+            countdownElement.innerHTML = "¡Oferta expirada!";
+        }
+    }
+
+    actualizarCuenta();
+}
+
+// Redirección a WhatsApp con la oferta especial
+function aprovecharOferta() {
+    let whatsappLink = `https://wa.me/573117947704?text=Hola,%20quiero%20aprovechar%20la%20oferta%20del%20Plan%20Élite%20por%20$79%20USD%20por%202%20meses`;
+    window.location.href = whatsappLink;
+}
