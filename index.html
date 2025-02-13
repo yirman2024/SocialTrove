@@ -3,192 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SocialTrove - Agencia experta en Facebook Ads. Publicidad efectiva para hacer crecer tu negocio.">
-    <title>SocialTrove - Facebook Ads</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: #fff;
-            text-align: center;
-        }
-
-        header {
-            background: rgba(0, 123, 255, 0.9);
-            padding: 20px 0;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        section {
-            padding: 40px;
-            margin: 20px auto;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        section:hover {
-            transform: scale(1.05);
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #ff5722;
-            animation: pulse 1s infinite alternate;
-        }
-
-        @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            background: rgba(255, 193, 7, 0.9);
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        li:hover {
-            transform: scale(1.05);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #ff9800;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #e68a00;
-        }
-
-        .countdown-container {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #e91e63;
-        }
-
-        footer {
-            background: rgba(52, 58, 64, 0.9);
-            padding: 15px 0;
-            margin-top: 20px;
-            box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        footer a {
-            color: #ff9800;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <script>
-        function startCountdown() {
-            const countdownElement = document.getElementById("countdown");
-            let timeLeft = 24 * 60 * 60;
-
-            function updateCountdown() {
-                let hours = Math.floor(timeLeft / 3600);
-                let minutes = Math.floor((timeLeft % 3600) / 60);
-                let seconds = timeLeft % 60;
-
-                countdownElement.innerHTML = `${hours}h : ${minutes}m : ${seconds}s`;
-
-                if (timeLeft > 0) {
-                    timeLeft--;
-                } else {
-                    clearInterval(countdownInterval);
-                }
-            }
-
-            updateCountdown();
-            const countdownInterval = setInterval(updateCountdown, 1000);
-        }
-
-        window.onload = startCountdown;
-    </script>
+    <title>SocialTrove - Marketing Digital</title>
+    <link rel="stylesheet" href="styles3.css">
 </head>
 <body>
-    <header>
-        <h1>🚀 SocialTrove - Facebook Ads 🚀</h1>
-    </header>
+
+<header>
+    <h1>Bienvenido a SocialTrove</h1>
+    <p>Tu agencia de marketing digital y publicidad en redes sociales</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+<br>
+<section id="quienes-somos">
+    <h2>Quiénes Somos</h2>
+    <p>Somos <strong>SocialTrove</strong>, una agencia de marketing digital especializada en el crecimiento de marcas y negocios en redes sociales.  
+       Nuestro equipo de expertos desarrolla estrategias personalizadas para aumentar la visibilidad, el engagement y las conversiones de nuestros clientes.</p>
+    <p>Nos apasiona la creatividad, la innovación y el poder de la comunicación digital.</p>
+</section>
+<br>
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
     
-    <div class="container">
-        <section>
-            <h2>¿Por qué elegirnos?</h2>
-            <p>En <span class="highlight">SocialTrove</span>, creamos estrategias de alto impacto para maximizar tu inversión y generar <span class="highlight">resultados reales.</span></p>
-            <p>Trabajamos con análisis de datos, segmentación avanzada y creatividad para asegurarnos de que tu negocio crezca con publicidad efectiva.</p>
-        </section>
-        
-        <section>
-            <h2>📢 Servicios Incluidos 📢</h2>
-            <ul>
-                <li>✅ Creación de contenido atractivo</li>
-                <li>✅ Análisis de métricas y reportes detallados</li>
-                <li>✅ Configuración y optimización de campañas</li>
-                <li>✅ Estrategias de retargeting efectivas</li>
-                <li>✅ Soporte y asesoría continua</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>🔥 Oferta Especial 🔥</h2>
-            <p><span style="text-decoration: line-through; color: red;">$199 USD</span> <span class="highlight">AHORA SOLO POR $85 USD al mes</span></p>
-            <p class="cta">🚨 ¡Cupos limitados! No dejes pasar esta oportunidad. 🚀</p>
-            <div class="countdown-container">
-                <p>⏳ La oferta termina en:</p>
-                <div id="countdown"></div>
-            </div>
-        </section>
-
-        <section>
-            <h2>📞 ¡Contáctanos Ahora! 📞</h2>
-            <p>Déjanos ayudarte a impulsar tu negocio al siguiente nivel.</p>
-            <p>📩 Email: socialtrove3@gmail.com</p>
-            <p>📞 Teléfono: +57 3117947704</p>
-            <a href="https://wa.me/573117947704?text=Hola%20SocialTrove,%20quiero%20saber%20m%C3%A1s%20sobre%20su%20estrategia%20de%20Facebook%20Ads!" target="_blank" class="btn">Escribe Al 💬 WhatsApp</a>
-        </section>
+    <div class="servicio">
+        <h3>💡 Estrategia y Gestión de Redes Sociales</h3>
+        <ul>
+            <li>Creación y optimización de perfiles.</li>
+            <li>Planificación y diseño de contenido.</li>
+            <li>Publicaciones y gestión de interacciones.</li>
+            <li>Análisis y reporte de rendimiento.</li>
+        </ul>
     </div>
 
-    <footer>
-        <p>&copy; 2025 - SocialTrove. Todos los derechos reservados.</p>
-        <p><a href="politicas.html">Políticas de Privacidad</a></p>
-    </footer>
+    <div class="servicio">
+        <h3>💥 Publicidad Digital</h3>
+        <ul>
+            <li>Campañas en Facebook, Instagram y Google Ads.</li>
+            <li>Estrategias de segmentación y optimización de anuncios.</li>
+            <li>Remarketing y embudos de conversión.</li>
+        </ul>
+    </div>
+
+    <div class="servicio">
+        <h3>🎬 Producción de Contenido</h3>
+        <ul>
+            <li>Diseño gráfico profesional.</li>
+            <li>Creación de videos cortos y animaciones.</li>
+            <li>Copywriting para redes y blogs.</li>
+        </ul>
+    </div>
+
+    <div class="servicio">
+        <h3>📈 SEO y Posicionamiento Web</h3>
+        <ul>
+            <li>Optimización SEO para redes y sitios web.</li>
+            <li>Estrategias de contenido y palabras clave.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section id="planes">
+    <h2>Planes y Precios</h2>
+    <div class="plan">
+        <h3>Plan Básico - $149/mes</h3>
+        
+            <p><strong>💸 Precio:</strong></p>
+            <ul>
+                <li><strong>Mensual:</strong> $149 USD</li>
+                <li><strong>Trimestral:</strong> $399 USD (Ahorras $48 USD)</li>
+                <li><strong>Anual:</strong> $1,499 USD (Ahorras $289 USD)</li>
+            </ul>
+            <p><strong>👉 Incluye:</strong></p>
+            <ul>
+                <li>Creación y optimización de perfiles en Facebook e Instagram.</li>
+                <li>12 publicaciones mensuales (3 por semana).</li>
+                <li>Diseño gráfico básico para posts.</li>
+                <li>Respuesta a mensajes y comentarios básicos.</li>
+                <li>Informe mensual de desempeño.</li>
+            </ul>
+        
+        </p>
+        <button class="btn-elegir" onclick="elegirPlan('Básico')">Elegir este plan</button>
+    </div>
+
+
+    <div class="plan">
+        <h3>Plan Avanzado - $299/mes</h3>
+       
+            <p><strong>💸 Precio:</strong></p>
+            <ul>
+                <li><strong>Mensual:</strong> $299 USD</li>
+                <li><strong>Trimestral:</strong> $799 USD (Ahorras $98 USD)</li>
+                <li><strong>Anual:</strong> $2,999 USD (Ahorras $589 USD)</li>
+            </ul>
+            <p><strong>👉 Incluye:</strong></p>
+            <ul>
+                <li>Todo lo del Plan Básico +</li>
+                <li>20 publicaciones mensuales (5 por semana).</li>
+                <li>Diseño gráfico profesional y branding en redes.</li>
+                <li>4 videos cortos optimizados para Reels y TikTok.</li>
+                <li>Gestión de interacciones con la comunidad.</li>
+                <li>1 campaña publicitaria mensual en Facebook & Instagram Ads (presupuesto no incluido).</li>
+                <li>Análisis y optimización de estrategia.</li>
+                
+            </ul></p>
+            <button class="btn-elegir" onclick="elegirPlan('Avanzado')">Elegir este plan</button>
+    </div>
+    <div class="plan">
+        <h3>Plan Premium - $499/mes</h3>
+        
+            <p><strong>💸 Precio:</strong></p>
+            <ul>
+                <li><strong>Mensual:</strong> $499 USD</li>
+                <li><strong>Trimestral:</strong> $1,349 USD (Ahorras $148 USD)</li>
+                <li><strong>Anual:</strong> $4,999 USD (Ahorras $989 USD)</li>
+            </ul>
+            <p><strong>👉 Incluye:</strong></p>
+            <ul>
+                <li>Todo lo del Plan Intermedio +</li>
+                <li>30 publicaciones mensuales (1 post diario).</li>
+                <li>8 videos cortos optimizados para Reels & TikTok.</li>
+                <li>Estrategia y automatización de mensajes.</li>
+                <li>2 campañas publicitarias en Facebook & Instagram Ads (presupuesto no incluido).</li>
+                <li>Análisis de métricas y optimización de anuncios.</li>
+                <li>Estrategia de email marketing (1 campaña mensual).</li>
+                
+            </ul></p>
+            <button class="btn-elegir" onclick="elegirPlan('Premium')">Elegir este plan</button>
+    </div>
+
+
+    <div class="plan">
+        <h3>Plan Elite - $799/mes</h3>
+        
+            <p><strong>💸 Precio:</strong></p>
+            <ul>
+                <li><strong>Mensual:</strong> $799 USD</li>
+                <li><strong>Trimestral:</strong> $2,099 USD (Ahorras $298 USD)</li>
+                <li><strong>Anual:</strong> $7,999 USD (Ahorras $1,589 USD)</li>
+            </ul>
+            <p><strong>👉 Incluye:</strong></p>
+            <ul>
+                <li>Todo lo del Plan Avanzado +</li>
+                <li>40 publicaciones mensuales (incluye stories, carruseles, posts interactivos).</li>
+                <li>12 videos cortos optimizados para Reels, TikTok y YouTube Shorts.</li>
+                <li>3 campañas publicitarias en Facebook, Instagram y Google Ads (presupuesto no incluido).</li>
+                <li>Optimización SEO en redes y sitio web.</li>
+                <li>Creación y automatización de embudos de ventas.</li>
+                <li>Informe detallado con estrategias de mejora.</li>
+                
+            </ul></p>
+            <button class="btn-elegir" onclick="elegirPlan('Elite')">Elegir este plan</button>
+    </div>
+</section>
+
+<!-- Sección de Beneficios Exclusivos -->
+<section id="beneficios">
+    <h2>🌟 Beneficios Exclusivos por Pago Trimestral o Anual</h2>
+    <ul>
+        <li><strong>Soporte prioritario</strong> en estrategias y optimización.</li>
+        <li><strong>Análisis de competencia</strong> incluido en planes anuales.</li>
+        <li><strong>Descuento en servicios adicionales</strong> como branding, diseño web o automatización.</li>
+    </ul>
+</section>
+
+
+  <!-- Modal de Instrucciones -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h2>¡Tu elección está casi lista! ✅</h2>
+        <p>Serás redirigido a WhatsApp para finalizar la contratación de tu plan.</p>
+        <button id="confirmar" class="btn-confirmar">Ir a WhatsApp</button>
+    </div>
+</div>  
+    
+<!-- Botón Más Información 
+<a href="#" class="btn-info" onclick="openModal()">Más Información</a>
+
+Modal de información 
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Detalles del Servicio</h2>
+        <p>Aquí puedes agregar más información sobre los planes y servicios que ofreces.</p>
+    </div>
+</div>-->
+
+
+<script>
+    // Función para abrir el modal
+    function openModal() {
+        document.getElementById("infoModal").style.display = "block";
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        document.getElementById("infoModal").style.display = "none";
+    }
+
+    // Cerrar el modal si el usuario hace clic fuera de él
+    window.onclick = function(event) {
+        var modal = document.getElementById("infoModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+<!-- Modal -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contáctanos</h2>
+        <p>Email: contacto@socialtrove.com</p>
+        <p>Teléfono: +123 456 7890</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 SocialTrove - Todos los derechos reservados.</p>
+</footer>
+
+<script src="script3.js"></script>
+
 </body>
 </html>
