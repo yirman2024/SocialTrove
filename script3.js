@@ -165,6 +165,6 @@ function iniciarCuentaRegresiva() {
 
 // Redirección a WhatsApp con la oferta especial
 function aprovecharOferta() {
-    let whatsappLink = `https://wa.me/573117947704?text=Hola,%20quiero%20aprovechar%20la%20oferta%20del%20Plan%20Élite%20por%20$79%20USD%20por%202%20meses`;
+    let whatsappLink = `https://wa.me/573117947704?text=Hola,%20quiero%20aprovechar%20la%20oferta%20del%20Plan%20Élite%20por%20$99%20USD%20por%202%20meses`;
     window.location.href = whatsappLink;
 }
