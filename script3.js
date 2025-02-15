@@ -139,29 +139,43 @@ function cerrarPopup() {
     document.getElementById("popup").style.display = "none";
 }
 
-// Función para la cuenta regresiva de 5 horas
+
+// Función para iniciar la cuenta regresiva de 5 horas
 function iniciarCuentaRegresiva() {
-    let tiempoRestante = 5 * 60 * 60; // 5 horas en segundos
-
     let countdownElement = document.getElementById("countdown");
-    
-    function actualizarCuenta() {
-        let horas = Math.floor(tiempoRestante / 3600);
-        let minutos = Math.floor((tiempoRestante % 3600) / 60);
-        let segundos = tiempoRestante % 60;
 
-        countdownElement.innerHTML = `${horas}h ${minutos}m ${segundos}s`;
+    // Verificamos si ya existe un tiempo de finalización guardado
+    let tiempoFinal = localStorage.getItem("tiempoFinal");
+
+    if (!tiempoFinal) {
+        // Si no hay un tiempo guardado, establecemos uno nuevo (5 horas desde ahora)
+        tiempoFinal = Date.now() + 5 * 60 * 60 * 1000;
+        localStorage.setItem("tiempoFinal", tiempoFinal);
+    }
+
+    function actualizarCuenta() {
+        let tiempoRestante = tiempoFinal - Date.now();
 
         if (tiempoRestante > 0) {
-            tiempoRestante--;
+            let horas = Math.floor((tiempoRestante / (1000 * 60 * 60)) % 24);
+            let minutos = Math.floor((tiempoRestante / (1000 * 60)) % 60);
+            let segundos = Math.floor((tiempoRestante / 1000) % 60);
+
+            countdownElement.innerHTML = `${horas}h ${minutos}m ${segundos}s`;
+
             setTimeout(actualizarCuenta, 1000);
         } else {
             countdownElement.innerHTML = "¡Oferta expirada!";
+            localStorage.removeItem("tiempoFinal"); // Eliminamos el tiempo guardado
         }
     }
 
     actualizarCuenta();
 }
+
+// Iniciar la cuenta regresiva cuando cargue la página
+document.addEventListener("DOMContentLoaded", iniciarCuentaRegresiva);
+
 
 // Redirección a WhatsApp con la oferta especial
 function aprovecharOferta() {
