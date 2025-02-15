@@ -188,3 +188,27 @@ function aprovecharOferta() {
 function redirectToWhatsApp() {
     window.open("https://wa.me/573117947704?text=¡Hola!%20Estoy%20interesado%20en%20sus%20servicios.%20¿Me%20pueden%20dar%20más%20información?", "_blank");
 }
+
+// Función para agregar un nuevo comentario
+function agregarComentario() {
+    let nombre = document.getElementById("nombre").value;
+    let mensaje = document.getElementById("mensaje").value;
+    let listaComentarios = document.getElementById("lista-comentarios");
+
+    if (nombre.trim() === "" || mensaje.trim() === "") {
+        alert("Por favor, completa todos los campos.");
+        return;
+    }
+
+    // Crear nuevo comentario
+    let nuevoComentario = document.createElement("div");
+    nuevoComentario.classList.add("comentario");
+    nuevoComentario.innerHTML = `<p><strong>🔹 ${nombre}:</strong> ${mensaje}</p>`;
+
+    // Agregar comentario a la lista
+    listaComentarios.appendChild(nuevoComentario);
+
+    // Limpiar los campos después de enviar
+    document.getElementById("nombre").value = "";
+    document.getElementById("mensaje").value = "";
+}
