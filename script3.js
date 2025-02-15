@@ -168,3 +168,9 @@ function aprovecharOferta() {
     let whatsappLink = `https://wa.me/573117947704?text=Hola,%20quiero%20aprovechar%20la%20oferta%20del%20Plan%20Élite%20por%20$99%20USD%20por%202%20meses`;
     window.location.href = whatsappLink;
 }
+
+
+// Función para redirigir a WhatsApp con mensaje predefinido
+function redirectToWhatsApp() {
+    window.open("https://wa.me/573117947704?text=¡Hola!%20Estoy%20interesado%20en%20sus%20servicios.%20¿Me%20pueden%20dar%20más%20información?", "_blank");
+}
