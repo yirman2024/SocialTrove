@@ -189,26 +189,48 @@ function redirectToWhatsApp() {
     window.open("https://wa.me/573117947704?text=¡Hola!%20Estoy%20interesado%20en%20sus%20servicios.%20¿Me%20pueden%20dar%20más%20información?", "_blank");
 }
 
-// Función para agregar un nuevo comentario
+// Función para cargar comentarios almacenados en LocalStorage
+function cargarComentarios() {
+    let listaComentarios = document.getElementById("lista-comentarios");
+    let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+    listaComentarios.innerHTML = ""; // Limpiar lista antes de cargar
+
+    comentariosGuardados.forEach(comentario => {
+        let nuevoComentario = document.createElement("div");
+        nuevoComentario.classList.add("comentario");
+        nuevoComentario.innerHTML = `<p><strong>🔹 ${comentario.nombre}:</strong> ${comentario.mensaje}</p>`;
+        listaComentarios.appendChild(nuevoComentario);
+    });
+}
+
+// Función para agregar un nuevo comentario y guardarlo en LocalStorage
 function agregarComentario() {
     let nombre = document.getElementById("nombre").value;
     let mensaje = document.getElementById("mensaje").value;
-    let listaComentarios = document.getElementById("lista-comentarios");
 
     if (nombre.trim() === "" || mensaje.trim() === "") {
         alert("Por favor, completa todos los campos.");
         return;
     }
 
-    // Crear nuevo comentario
-    let nuevoComentario = document.createElement("div");
-    nuevoComentario.classList.add("comentario");
-    nuevoComentario.innerHTML = `<p><strong>🔹 ${nombre}:</strong> ${mensaje}</p>`;
+    let comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
 
-    // Agregar comentario a la lista
-    listaComentarios.appendChild(nuevoComentario);
+    let nuevoComentario = {
+        nombre: nombre,
+        mensaje: mensaje
+    };
+
+    comentariosGuardados.push(nuevoComentario);
+    localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
+
+    // Actualizar la lista de comentarios en la página
+    cargarComentarios();
 
     // Limpiar los campos después de enviar
     document.getElementById("nombre").value = "";
     document.getElementById("mensaje").value = "";
 }
+
+// Cargar comentarios al iniciar la página
+window.onload = cargarComentarios;
