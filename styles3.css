@@ -474,3 +474,59 @@ Efecto hover en el botón "Más Información"
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
+
+/*------------------------------------------------------------------*/
+
+/* ESTILOS PARA LA SECCIÓN DE COMENTARIOS */
+.comentarios-container {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.comentarios-container h2 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.7);
+}
+
+.lista-comentarios {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.comentario {
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.formulario-comentario {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.formulario-comentario input,
+.formulario-comentario textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.formulario-comentario button {
+    background: #ff4500;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.formulario-comentario button:hover {
+    background: #ffcc00;
+    color: black;
+}
