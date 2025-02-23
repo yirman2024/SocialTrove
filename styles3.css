@@ -453,28 +453,56 @@ Efecto hover en el botón "Más Información"
 
 /*-----------------------------------------------------------*/
 
-/* ANUNCIO EN CABECERA */
+/* Estilo para el anuncio en la cabecera */
+/* Anuncio fijo en la parte superior de la página */
 .anuncio {
-    background-color: #FF4500; /* Naranja fuerte */
-    color: #FFF;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.7);
-    animation: moverAnuncio 18s linear infinite;
+    position: fixed; /* Fija el anuncio en la parte superior */
+    top: 0; /* Lo coloca en la parte superior de la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    background-color: red; /* Fondo rojo llamativo */
+    color: yellow; /* Texto en color amarillo para mayor contraste */
+    padding: 10px; /* Espaciado interno para mejorar la visibilidad */
+    font-size: 20px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-shadow: 2px 2px 5px black; /* Sombra para hacer el texto más legible */
+    overflow: hidden; /* Evita que el texto se desborde */
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+    z-index: 1000; /* Se asegura de que el anuncio esté por encima de otros elementos */
 }
 
-/* ANIMACIÓN DE IZQUIERDA A DERECHA */
-@keyframes moverAnuncio {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+/* Estilo del contenido dentro del anuncio */
+.anuncio span {
+    display: inline-block; /* Permite la animación del texto */
+    position: relative; /* Permite ajustar su posición si es necesario */
+    animation: desplazamiento 30s linear infinite; /* Aplica la animación de desplazamiento */
 }
 
+/* Animación de desplazamiento del texto */
+@keyframes desplazamiento {
+    from { transform: translateX(100%); } /* Comienza desde el lado derecho */
+    to { transform: translateX(-100%); } /* Se mueve hacia el lado izquierdo */
+}
+
+
+/* Estilo del texto con efecto 3D */
+.anuncio-urgencia span {
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5), /* Sombra negra para profundidad */
+        0 0 25px rgba(255, 255, 255, 0.7), /* Brillo blanco para efecto de resplandor */
+        0 0 5px rgba(0, 0, 0, 0.7); /* Segunda sombra negra para más profundidad */
+    transform: perspective(100px) rotateX(15deg); /* Aplica una perspectiva para efecto 3D */
+    animation: animar-texto 1.5s ease-out infinite alternate; /* Agrega animación de movimiento */
+}
+
+/* Animación para el efecto 3D en el texto */
+@keyframes animar-texto {
+    0% {
+        transform: perspective(100px) rotateX(15deg) scale(1); /* Posición inicial */
+    }
+    100% {
+        transform: perspective(100px) rotateX(10deg) scale(1.1); /* Hace que el texto se incline y crezca ligeramente */
+    }
+}
 /*------------------------------------------------------------------*/
 
 /* ESTILOS PARA LA SECCIÓN DE COMENTARIOS */
