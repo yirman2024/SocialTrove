@@ -1,0 +1,635 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0f1d;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Fondo de partículas */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Mantener en el fondo */
+  background: linear-gradient(135deg, #1c1f2a 0%, #0b0f1d 100%);
+}
+
+/* Sección principal */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenido sobre el fondo */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para el título principal con sombra 3D */
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff; /* Blanco */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7); /* Sombra 3D */
+}
+
+/* Estilo para resaltar "IA" */
+.ia {
+  color: #ffcc00; /* Amarillo vibrante */
+  font-weight: bold;
+  font-size: 2.7rem;
+  text-shadow: 3px 3px 5px rgba(255, 153, 0, 0.7); /* Sombra dorada */
+}
+
+/* Sección "Quiénes Somos" */
+.quienes-somos {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  margin-top: -50px;
+  z-index: 10;
+  position: relative;
+}
+
+/* Título de "Quiénes Somos" con sombra */
+.quienes-somos h2 {
+  font-size: 2rem;
+  color: #6a5acd;
+  text-shadow: 3px 3px 5px rgba(106, 90, 205, 0.7); /* Sombra morada */
+  margin-bottom: 20px;
+}
+
+/* Texto de "Quiénes Somos" */
+.quienes-somos p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #4a00e0, #8e2de2);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra 3D en botones */
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  transform: scale(1.05);
+}
+
+/* Botón alternativo */
+.btn-alt {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+.btn-alt:hover {
+  background: linear-gradient(45deg, #dd2476, #ff512f);
+}
+/* Sección "Nuestros Servicios" */
+.servicios {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 2.2rem;
+  color: #6a5acd;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de tarjetas en horizontal */
+.servicios-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta de cada servicio */
+.servicio-card {
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  backdrop-filter: blur(10px);
+  width: 300px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.servicio-card:hover {
+  transform: scale(1.05);
+  border: 2px solid #6a5acd;
+}
+
+/* Títulos de los servicios */
+.servicio-card h3 {
+  font-size: 1.4rem;
+  color: #6a5acd;
+  margin-bottom: 15px;
+}
+
+/* Lista de beneficios */
+.servicio-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.servicio-card ul li {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+/* Íconos de check ✅ alineados */
+.servicio-card ul li::before {
+  content: "✔️";
+  margin-right: 10px;
+  color: #6a5acd;
+  font-size: 1.2rem;
+}
+/* Sección "Planes y Precios" */
+.planes {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.planes h2 {
+  font-size: 2.2rem;
+  color: #6a5acd;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de los planes */
+.planes-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Tarjeta de cada plan */
+.plan-card {
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  backdrop-filter: blur(10px);
+  width: 300px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  border: 2px solid #6a5acd;
+}
+
+/* Títulos de los planes */
+.plan-card h3 {
+  font-size: 1.5rem;
+  color: #6a5acd;
+  margin-bottom: 15px;
+}
+
+/* Precios */
+.precio {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 5px 0;
+}
+
+/* Lista de beneficios */
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-card ul li {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+/* Íconos de check ✅ */
+.plan-card ul li::before {
+  content: "✔️";
+  margin-right: 10px;
+  color: #6a5acd;
+  font-size: 1.2rem;
+}
+
+/* Botón de selección de plan */
+.btn-plan {
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  width: 100%;
+  background: #6a5acd; /* Color morado */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Evita subrayado */
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.btn-plan:hover {
+  background: #836fff;
+  transform: scale(1.05);
+}
+
+/* estolos para los precios Aplica color dorado solo a los números y el signo $ */
+.precio strong {
+  color: #48ff00;  /* verde brillante */
+  font-size: 1.3rem;  /* Tamaño ligeramente más grande */
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0b0f1d;  /* Mantiene la armonía con el diseño */
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;  /* Un leve efecto para que no resalte demasiado */
+}
+/* Sección de Contacto */
+.contacto {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro transparente */
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Estilos del formulario */
+.contacto form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Campos de entrada */
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2); /* Fondo con transparencia */
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Cambio de color en focus */
+.contacto input:focus,
+.contacto textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Botón de enviar */
+.contacto .btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background: #6a5acd; /* Color llamativo */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Efecto hover en botón */
+.contacto .btn:hover {
+  background: #836fff;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .contacto form {
+      width: 90%;
+  }
+}
+.anuncio-fijado {
+  width: 100%;
+  background: #6a5acd; /* Color amarillo para resaltar */
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 1rem;
+}
+
+marquee {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+/***************************************************/
+ /*CSS del Modal*/ 
+
+ .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background: white;
+  color: #333;
+  width: 90%;
+  max-width: 400px;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Estilo del título */
+.titulo-oferta {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6a5acd;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra agregada */
+}
+
+/* Estilo del texto de la oferta */
+.descripcion-oferta {
+  font-size: 1.1rem;
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+.oferta-texto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6a5acd;
+  margin-bottom: 5px;
+}
+
+/* Estilo del texto destacado */
+.texto-destacado {
+  color: #6a5acd; /* Color naranja fuerte */
+  font-weight: bold;
+}
+
+/* Estilo para resaltar solo el texto del precio con efecto 3D */
+.precio-oferta {
+  color: #ff0000; /* Verde llamativo */
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra 3D */
+}
+
+/* Estilos del contador */
+/* Estilos del contador */
+.contador {
+  font-size: 1.3rem; /* Tamaño reducido */
+  font-weight: bold;
+  color: #ff0000;
+  background: #ffd700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  animation: pulse 1s infinite alternate;
+}
+
+
+/* Estilo del botón */
+.btn-plan {
+  display: inline-block;
+  background: #6a5acd;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-plan:hover {
+  background: #836fff;
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/******************************************************************/
+
+
+/* Botón dentro de cada plan */
+.btn-personalizado {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-personalizado:hover {
+  transform: scale(1.05);
+}
+/*******************************************/
+/* Modal de Solicitud Personalizada */
+.modal-personalizado {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content-personalizado {
+  background: linear-gradient(135deg, #1c1f2a, #0b0f1d);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  position: relative; /* Para posicionar la "X" */
+}
+
+/* Botón Cerrar (X) dentro del modal */
+.close-personalizado {
+  position: absolute;
+  top: 5px; /* Ajustado para subir la "X" */
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background: none;
+}
+
+.close-personalizado:hover {
+  color: red;
+}
+
+/* Opciones del formulario */
+.opciones-personalizado {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.opciones-personalizado label {
+  display: block;
+  font-size: 1rem;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.opciones-personalizado input {
+  margin-right: 10px;
+}
+
+/* Botón de Enviar */
+.btn-personalizado {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #4a00e0, #8e2de2);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-personalizado:hover {
+  background: linear-gradient(45deg, #e2662d, #4a00e0);
+  transform: scale(1.05);
+}
+.personalizado-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #6a5acd; /* Color morado */
+  color: white;
+  border: none;
+  padding: 10px; /* Reducido */
+  border-radius: 8px;
+  font-size: 0.9rem; /* Reducido */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Evita subrayado */
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.personalizado-btn:hover {
+  background: #836fff;
+  transform: scale(1.05);
+}
+.btn-plan {
+  display: flex; /* Asegura que el botón se comporte como un contenedor flexible */
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
