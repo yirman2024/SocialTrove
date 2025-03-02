@@ -305,7 +305,7 @@ footer {
 /* Estilos para el párrafo dentro del footer */
 footer p {
   margin: 0; /* Elimina márgenes predeterminados */
-  opacity: 0.8;  /* Reduce la opacidad para que no resalte demasiado */
+  opacity: 0.3;  /* Reduce la opacidad para que no resalte demasiado */
 }
 
 /* Sección de Contacto */
