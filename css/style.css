@@ -772,3 +772,32 @@ marquee {
 .hidden {
   display: none;
 }
+
+
+/* ====== Contenedor del header ====== */
+/* Define la posición y apariencia del contenedor del logo */
+.header {
+  position: absolute; /* Posiciona el elemento de forma absoluta en relación con su contenedor más cercano con posición relativa */
+  top: 70px; /* Ajusta la distancia del logo desde la parte superior de la página */
+  right: 50px; /* Mueve el logo hacia la derecha */
+  z-index: 1000; /* Asegura que el logo esté por encima de otros elementos en la página */
+}
+
+/* ====== Estilos del logo ====== */
+.logo {
+  max-width: 180px; /* Establece un tamaño máximo para el logo */
+  height: auto; /* Mantiene la proporción del logo al cambiar el ancho */
+  animation: fadeInRight 1.5s ease-in-out; /* Aplica una animación de entrada desde la derecha */
+}
+
+/* ====== Animación de entrada desde la derecha ====== */
+@keyframes fadeInRight {
+  from {
+      opacity: 0; /* Inicia con el logo invisible */
+      transform: translateX(50px); /* Desplaza el logo 50px hacia la derecha */
+  }
+  to {
+      opacity: 1; /* Hace el logo completamente visible */
+      transform: translateX(0); /* Devuelve el logo a su posición original */
+  }
+}
