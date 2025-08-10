@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let mensaje = document.getElementById("mensaje").value;
   
     // Número de WhatsApp (cambiar por el número real)
-    let numeroWhatsApp = "123456789"; 
+    let numeroWhatsApp = "+573117947704"; 
   
     // Mensaje preformateado para WhatsApp
     let mensajeWhatsApp = `Hola, soy ${nombre}. 
@@ -227,3 +227,4 @@ document.addEventListener("DOMContentLoaded", function () {
         cerrarModal();
     });
 });
+
