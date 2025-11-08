@@ -1,288 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialTrove</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Fuentes y librerías -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script defer src="js/scripts.js"></script>
-</head>
-<body>
-
-     <header class="header">
-        <img src="img/logo.png" alt="Logo de la empresa" class="logo">
-    </header>
-
-    <div class="anuncio-fijado">
-        <marquee behavior="scroll" direction="right">
-            🚀 ¡Nuevo Servicio! 📲 Automatización de WhatsApp con IA 🤖 ¡Aumenta tus ventas y atención al cliente de forma automática!
-        </marquee>
-    </div>
-    
-    <!-- Fondo de partículas -->
-    <div id="particles-js"></div>
-
-    <!-- Sección principal -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Bienvenido a SocialTrove<br>Impulsa tu negocio con <span class="ia">IA</span> y estrategias digitales</h1>
-            <p>Tu Agencia de Marketing  digital en redes sociales, automatización de WhatsApp, diseño web con IA y mas.</p>
-           <a href="https://wa.me/573117947704?text=Hola,%20quiero%20más%20información sobre los servicios de SocialTrove" class="btn">💬 Hablemos por WhatsApp</a>
-
-            <a href="#contacto" class="btn btn-alt">📩 Solicitar Presupuesto</a>
-        </div>
-    </header>
-
-    <!-- Sección "Quiénes Somos" -->
-    <section class="quienes-somos">
-        <h2>Quiénes Somos</h2>
-        <p>Somos <strong>SocialTrove</strong>, una agencia de marketing digital especializada en el crecimiento de marcas y negocios en redes sociales.</p>
-        <p>Nuestro equipo de expertos desarrolla estrategias personalizadas para aumentar la visibilidad, el engagement y las conversiones de nuestros clientes.</p>
-        <p>Nos apasiona la creatividad, la innovación y el poder de la comunicación digital.</p>
-    </section>
-
-    <!-- Servicios -->
-<!-- Sección "Nuestros Servicios" -->
-<section class="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="servicios-container">
-        <!-- Tarjeta de Estrategia y Gestión de Redes Sociales -->
-        <div class="servicio-card">
-            <h3>💡 Estrategia y Gestión de Redes Sociales</h3>
-            <ul>
-                <li>✅ Creación y optimización de perfiles.</li>
-                <li>✅ Planificación y diseño de contenido.</li>
-                <li>✅ Publicaciones y gestión de interacciones.</li>
-                <li>✅ Análisis y reporte de rendimiento.</li>
-            </ul>
-        </div>
-        
-        <!-- Tarjeta de Publicidad Digital -->
-        <div class="servicio-card">
-            <h3>🚀 Publicidad Digital</h3>
-            <ul>
-                <li> Campañas optimizadas en redes sociales.</li>
-                <li> Estrategias de segmentación avanzada.</li>
-                <li> Análisis de métricas y optimización constante.</li>
-                <li>📈 SEO y Posicionamiento Web</li>
-                <li>Estrategias de contenido y palabras clave.</li>
-            </ul>
-        </div>
-
-        <!-- Tarjeta de Automatización con IA -->
-        <div class="servicio-card">
-            <h3>🤖 Automatización con IA</h3>
-            <ul>
-                <li> Implementación de chatbots inteligentes.</li>
-                <li> Automatización de respuestas y procesos.</li>
-                <li> Integración con WhatsApp y redes sociales.</li>
-                <li>🎯 Segmentación de clientes y mensajes masivos.</li>
-                <li>💰 Automatización de ventas y seguimiento.</li>
-            </ul>
-        </div>
-
-        <!-- NUEVA Tarjeta de Producción de Contenido -->
-        <div class="servicio-card">
-            <h3>🎬 Producción de Contenido</h3>
-            <ul>
-                <li> Diseño gráfico profesional.</li>
-                <li> Creación de videos cortos y animaciones.</li>
-                <li> Copywriting para redes y blogs.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-
-<!-- Sección "Planes y Precios" -->
 <section class="planes">
     <h2>📊 Planes y Precios</h2>
     <div class="planes-container">
 
-        <!-- Tarjeta del Plan Esencial -->
+        <!-- Plan Esencial -->
         <div class="plan-card">
             <h3>💸 Plan Esencial</h3>
-            <h>Ideal para quienes comienzan en redes sociales.</h>
-            <p class="precio">Mensual: <strong>$149 USD</strong></p>
+            <h>Ideal para emprendedores que inician su presencia online.</h>
+            <p class="precio">Mensual: <strong>$79 USD</strong></p>
             <ul>
-                <li>Creación y optimización de perfiles en Facebook e Instagram.</li>
-                <li>12 publicaciones mensuales (3/semana)</li>
-                <li>3 stories semanales</li>
-                <li>Diseño gráfico básico</li>
-                <li>Optimización de hashtags y textos.</li>
-                <li>Informe mensual de desempeño.</li>
+                <li>Optimización de perfiles en Facebook e Instagram.</li>
+                <li>12 publicaciones mensuales (3 por semana).</li>
+                <li>3 stories semanales.</li>
+                <li>Diseño gráfico básico y textos optimizados.</li>
+                <li>Informe mensual de resultados.</li>
             </ul>
-            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20contratar%20el%20Plan%20Esencial%20de%20SocialTrove." 
-            class="btn-plan">Elegir este plan</a>
-           <button class="btn-personalizado-plan personalizado-btn" data-plan="Básico">📋 Solicitar Plan Personalizado</button>
+            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20el%20Plan%20Esencial%20de%20SocialTrove." class="btn-plan">Elegir este plan</a>
+            <button class="btn-personalizado-plan personalizado-btn" data-plan="Esencial">📋 Solicitar Plan Personalizado</button>
         </div>
 
-        <!-- Tarjeta del Plan Profesional -->
+        <!-- Plan Profesional -->
         <div class="plan-card">
             <h3>🚀 Plan Profesional</h3>
-            <p class="precio">Mensual: <strong>$299 USD</strong></p>
+            <p class="precio">Mensual: <strong>$149 USD</strong></p>
             <ul>
                 <li>Todo lo del Plan Esencial +</li>
                 <li>20 publicaciones mensuales (5 por semana).</li>
-                <li>Diseño gráfico profesional y branding.</li>
-                <li>6 stories semanales.</li>
-                <li>5 videos cortos optimizados para Reels, TikTok y Facebook.</li>
-                <li>Gestión de comunidad.</li>
-                <li>1 campaña publicitaria mensual en Facebook & Instagram Ads (presupuesto no incluido).</li>
-                <li>Asesoría de contenido y estrategia mensual.</li>
+                <li>Diseño profesional y branding visual.</li>
+                <li>6 stories semanales y 3 videos cortos para Reels o TikTok.</li>
+                <li>Gestión de comunidad y respuestas.</li>
+                <li>1 campaña publicitaria mensual (presupuesto no incluido).</li>
             </ul>
-            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20contratar%20el%20Plan%20Profesional%20de%20SocialTrove." 
-            class="btn-plan">Elegir este plan</a>
-            <button class="btn-personalizado-plan personalizado-btn" data-plan="Avanzado">📋 Solicitar Plan Personalizado</button>
+            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20el%20Plan%20Profesional%20de%20SocialTrove." class="btn-plan">Elegir este plan</a>
+            <button class="btn-personalizado-plan personalizado-btn" data-plan="Profesional">📋 Solicitar Plan Personalizado</button>
         </div>
 
-        <!-- Tarjeta del Plan Élite -->
+        <!-- Plan Premium -->
         <div class="plan-card">
             <h3>👑 Plan Premium</h3>
-            <p class="precio">Mensual: <strong>$499 USD</strong></p>
+            <p class="precio">Mensual: <strong>$249 USD</strong></p>
             <ul>
                 <li>Todo lo del Plan Profesional +</li>
                 <li>30 publicaciones mensuales (incluye carruseles e interactivos).</li>
-                <li>6 videos cortos optimizados + 1 video publicitario mensual.</li>
-                <li>8 stories con interacción.</li>
-                <li>Automatización de mensajes y WhatsApp con IA.</li>
-                <li>2 campañas publicitarias (Facebook, Instagram o Google Ads) <em>(presupuesto no incluido)</em>.</li>
-                <li>Estrategia de email marketing (1 campaña mensual).</li>
-                <li>Embudo de ventas básico automatizado.</li>
-                <li>Informe estratégico mensual.</li>
+                <li>6 videos cortos + 1 video publicitario mensual.</li>
+                <li>Automatización básica de mensajes con IA.</li>
+                <li>2 campañas publicitarias (Facebook, Instagram o Google Ads).</li>
+                <li>Campaña mensual de email marketing.</li>
+                <li>Embudo de ventas automatizado básico.</li>
             </ul>
-            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20contratar%20el%20Plan%20Premium%20de%20SocialTrove." 
-            class="btn-plan">Elegir este plan</a>
+            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20el%20Plan%20Premium%20de%20SocialTrove." class="btn-plan">Elegir este plan</a>
             <button class="btn-personalizado-plan personalizado-btn" data-plan="Premium">📋 Solicitar Plan Personalizado</button>
         </div>
 
-         <!-- Tarjeta del Plan Profesional -->
+        <!-- Plan Élite -->
         <div class="plan-card">
-           <h3>👑 Plan Élite</h3>
-      <p class="precio">Mensual: <strong>$1,199 USD</strong></p>
-      <ul>
-        <li>Todo lo del Plan Premium +</li>
-        <li>40 publicaciones mensuales (posts, stories, carruseles, posts interactivos).</li>
-        <li>12 videos cortos optimizados para Reels, TikTok y YouTube Shorts.</li>
-        <li>3 campañas publicitarias en Facebook, Instagram y Google Ads (presupuesto no incluido).</li>
-        <li>Optimización SEO en redes y sitio web.</li>
-        <li>Creación y automatización de embudos de ventas.</li>
-        <li>Informe detallado con estrategias de mejora.</li>
-        <li>Monitoreo en tiempo real de interacciones y tendencias.</li>
-        <li>Optimización de perfiles en LinkedIn y Twitter.</li>
-        <li>Soporte prioritario.</li>
-        <li>🤖 Automatización de WhatsApp con Inteligencia Artificial.</li>
-      </ul>
-            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20contratar%20el%20Plan%20Elite%20de%20SocialTrove." 
-            class="btn-plan">Elegir este plan</a>
+            <h3>🔥 Plan Élite</h3>
+            <p class="precio">Mensual: <strong>$399 USD</strong></p>
+            <ul>
+                <li>Todo lo del Plan Premium +</li>
+                <li>40 publicaciones (posts, carruseles y stories con interacción).</li>
+                <li>10 videos cortos + 2 videos publicitarios.</li>
+                <li>3 campañas publicitarias multiplataforma.</li>
+                <li>SEO avanzado en redes y sitio web.</li>
+                <li>Automatización avanzada con IA y WhatsApp.</li>
+                <li>Embudos de venta completos y soporte prioritario.</li>
+            </ul>
+            <a href="https://wa.me/573117947704?text=Hola,%20quiero%20el%20Plan%20Élite%20de%20SocialTrove." class="btn-plan">Elegir este plan</a>
             <button class="btn-personalizado-plan personalizado-btn" data-plan="Élite">📋 Solicitar Plan Personalizado</button>
         </div>
     </div>
 </section>
-
-
-
-   <!-- Contacto -->
-<section id="contacto" class="contacto">
-    <h2>Solicita tu presupuesto</h2>
-    <form id="contact-form">
-        <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
-        <input type="tel" id="telefono" name="telefono" placeholder="Tu Teléfono" required>
-        <input type="email" id="email" name="email" placeholder="Tu Email" required>
-        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu negocio" required></textarea>
-        <button type="submit" class="btn">📨 Enviar</button>
-    </form>
-</section>
-
-  
-<!-- Modal de Oferta Especial -->
-<div id="modalOferta" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 class="titulo-oferta">🎉 ¡Oferta Especial por Tiempo Limitado!</h2>
-        Obtén <span class="texto-destacado">todos los servicios del Plan Élite</span> por solo 
-        <span class="precio-oferta">$599 USD</span> durante 3 meses.
-        <p class="oferta-texto">Oferta válida solo por:</p>
-        <p id="contador" class="contador"></p>
-        <a href="https://wa.me/573117947704?text=Hola,%20quiero%20aprovechar%20la%20Oferta%20Especial%20del%20Plan%20Élite%20por%20$599%20USD%20durante%202%20meses." 
-        class="btn-plan">¡Aprovechar Oferta Ahora!</a>
-    </div>
-</div>
-
-    <!-- Partículas JS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            particlesJS.load('particles-js', 'js/particles.json', function() {
-                console.log("🎉 Particles.js cargado exitosamente");
-            });
-        });
-    </script>
-
-
-
-
-<!-- Modal de Solicitud Personalizada -->
-<div id="modalPersonalizado" class="modal-personalizado">
-    <div class="modal-content-personalizado">
-        <span class="close-personalizado">&times;</span>
-        <h2>Solicita tu Plan Personalizado</h2>
-        <p>Selecciona los servicios que deseas incluir en el <span id="nombrePlan"></span>:</p>
-        
-        <form id="formPersonalizado">
-            <div class="opciones-personalizado" id="opcionesServicios"></div>
-            <p><strong>Total estimado: </strong> <span id="precioTotal">$0 USD</span></p>
-            <button type="submit" class="btn-personalizado">Enviar Solicitud</button>
-        </form>
-    </div>
-</div>
-
-
-
-      <!-- Footer -->
-<footer>
-    <p>&copy; 2025 <strong>SocialTrove Agencia de Marketing Digital con IA</strong> - Todos los derechos reservados.</p>
-    <div class="footer-links">
-        <a href="terminos.html" class="footer-link">📜 Términos y Condiciones</a>
-        <a href="politicas.html" class="footer-link">🔒 Política de Privacidad</a>
-    </div>
-</footer>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const cookieBanner = document.getElementById("cookie-banner");
-        const acceptCookies = document.getElementById("accept-cookies");
-        const declineCookies = document.getElementById("decline-cookies");
-    
-        // Verifica si ya hay una elección de cookies almacenada
-        if (localStorage.getItem("cookiesAccepted") === "true") {
-            cookieBanner.classList.add("hidden");
-        }
-    
-        acceptCookies.addEventListener("click", function () {
-            localStorage.setItem("cookiesAccepted", "true");
-            cookieBanner.classList.add("hidden");
-        });
-    
-        declineCookies.addEventListener("click", function () {
-            localStorage.setItem("cookiesAccepted", "false");
-            cookieBanner.classList.add("hidden");
-        });
-    });
-    </script>
-    
-<!-- Banner de Cookies -->
-<div id="cookie-banner" class="cookie-container">
-    <p>🍪 Usamos cookies para mejorar tu experiencia en nuestra web. Al continuar, aceptas nuestra <a href="politicas.html">Política de Privacidad</a>.</p>
-    <button id="accept-cookies" class="cookie-btn">Aceptar</button>
-    <button id="decline-cookies" class="cookie-btn decline">Rechazar</button>
-</div>
-
-</body>
-</html>
-
