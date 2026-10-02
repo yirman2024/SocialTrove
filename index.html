@@ -61,7 +61,7 @@ section{width:100%;padding:100px 0;position:relative}.kicker{color:var(--accent)
     </video>
 
     <div class="video-modal-title">
-      <h3 id="videoModalTitle">Planes SocialTrove: conoce tus opciones</h3>
+      <h3 id="videoModalTitle">Conoce SocialTrove</h3>
       <p>Planes, presupuesto publicitario, retargeting, A/B testing y plan personalizado.</p>
     </div>
   </div>
@@ -186,6 +186,7 @@ section{width:100%;padding:100px 0;position:relative}.kicker{color:var(--accent)
           <option>Contenido de Conversión</option>
           <option>Estrategia Digital</option>
           <option>Varios servicios</option>
+          <option>Plan personalizado</option>
           <option>No estoy seguro</option>
         </select>
       </div>
@@ -214,7 +215,7 @@ section{width:100%;padding:100px 0;position:relative}.kicker{color:var(--accent)
 
 <a href="#" class="float open-modal" aria-label="Hablar con un especialista">💬</a>
 <script>
-const modal=document.getElementById('modal'),closeBtn=document.getElementById('close'),form=document.getElementById('leadForm'),error=document.getElementById('error'),WA='573137080441';const videoModal=document.getElementById('videoModal'),videoClose=document.getElementById('videoModalClose'),planVideo=document.getElementById('planVideo'),videoTrigger=document.getElementById('openVideoModal');function openVideo(){videoModal.classList.add('active');videoModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}function closeVideo(){videoModal.classList.remove('active');videoModal.setAttribute('aria-hidden','true');if(planVideo)planVideo.pause();document.body.classList.remove('modal-open')}if(videoTrigger)videoTrigger.addEventListener('click',openVideo);if(videoClose)videoClose.addEventListener('click',closeVideo);if(videoModal)videoModal.addEventListener('click',e=>{if(e.target===videoModal)closeVideo()});
+const modal=document.getElementById('modal'),closeBtn=document.getElementById('close'),form=document.getElementById('leadForm'),error=document.getElementById('error'),WA='573137080441';const videoModal=document.getElementById('videoModal'),videoClose=document.getElementById('videoModalClose'),planVideo=document.getElementById('planVideo'),videoTrigger=document.getElementById('openVideoModal');function openVideo(){videoModal.classList.add('active');videoModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');if(planVideo)planVideo.load()}function closeVideo(){videoModal.classList.remove('active');videoModal.setAttribute('aria-hidden','true');if(planVideo)planVideo.pause();document.body.classList.remove('modal-open')}if(videoTrigger)videoTrigger.addEventListener('click',openVideo);if(videoClose)videoClose.addEventListener('click',closeVideo);if(videoModal)videoModal.addEventListener('click',e=>{if(e.target===videoModal)closeVideo()});
 function openModal(e){if(e)e.preventDefault();modal.classList.add('active');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');setTimeout(()=>document.getElementById('name').focus(),100)}
 function closeModal(){modal.classList.remove('active');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
 document.querySelectorAll('.open-modal').forEach(b=>b.addEventListener('click',openModal));closeBtn.addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('active'))closeModal();if(e.key==='Escape'&&videoModal&&videoModal.classList.contains('active'))closeVideo()});
